@@ -1,0 +1,71 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.ReliefFAttributeEval -M -1 -D 1 -K 2
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     NormalFullData-weka.filters.unsupervised.attribute.NumericToNominal-R23
+Instances:    78524
+Attributes:   23
+              rms_energy
+              roll_off_85
+              roll_off_90
+              MFCC1
+              MFCC2
+              MFCC3
+              MFCC4
+              MFCC5
+              MFCC6
+              MFCC7
+              MFCC8
+              MFCC9
+              MFCC10
+              MFCC11
+              MFCC12
+              MFCC13
+              zcr
+              spectral_flatness
+              spectral_kurtosis
+              spectral_brightness
+              spectral_irregularity
+              spectral_centroid
+              class
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 23 class):
+	ReliefF Ranking Filter
+	Instances sampled: all
+	Number of nearest neighbours (k): 2
+	Equal influence nearest neighbours
+
+Ranked attributes:
+ 0.03754   19 spectral_kurtosis
+ 0.03713    1 rms_energy
+ 0.0359    10 MFCC7
+ 0.03344    6 MFCC3
+ 0.03251    5 MFCC2
+ 0.03031    7 MFCC4
+ 0.02963   18 spectral_flatness
+ 0.02861   11 MFCC8
+ 0.02825    4 MFCC1
+ 0.0269    12 MFCC9
+ 0.02352    9 MFCC6
+ 0.02347   13 MFCC10
+ 0.02331   17 zcr
+ 0.02222   16 MFCC13
+ 0.0222     8 MFCC5
+ 0.02006   15 MFCC12
+ 0.01815   20 spectral_brightness
+ 0.01799   14 MFCC11
+ 0.01718    3 roll_off_90
+ 0.01523   22 spectral_centroid
+ 0.01097    2 roll_off_85
+ 0.00756   21 spectral_irregularity
+
+Selected attributes: 19,1,10,6,5,7,18,11,4,12,9,13,17,16,8,15,20,14,3,22,2,21 : 22
+

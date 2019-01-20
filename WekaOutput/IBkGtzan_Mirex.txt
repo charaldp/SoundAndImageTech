@@ -1,0 +1,190 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AttributeSelectedClassifier -E "weka.attributeSelection.PrincipalComponents -R 0.95 -A 5" -S "weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1" -W weka.classifiers.lazy.IBk -- -K 4 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     afterProcGTZAN-weka.filters.unsupervised.attribute.NumericToNominal-R23
+Instances:    9321
+Attributes:   23
+              RMS_Energy
+              Roll_Off_85
+              Roll_Off_90
+              MFCC_1
+              MFCC_2
+              MFCC_3
+              MFCC_4
+              MFCC_5
+              MFCC_6
+              MFCC_7
+              MFCC_8
+              MFCC_9
+              MFCC_10
+              MFCC_11
+              MFCC_12
+              MFCC_13
+              Zero_Crossing_Rate
+              Spectral_Flatness
+              Spectral_Kurtosis
+              Spectral_Brightness
+              Spectral_Irregularity
+              Spectral_Centroid
+              Class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+AttributeSelectedClassifier:
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (unsupervised):
+	Principal Components Attribute Transformer
+
+Correlation matrix
+  1     -0.05  -0.06  -0.05  -0.13   0.03  -0.16   0.03  -0.04   0.04   0     -0.03   0.02  -0.04  -0.05  -0.02   0.06  -0.11  -0.02   0.05   0.11  -0.04 
+ -0.05   1      0.97  -0.72   0.53  -0.31   0.36   0.03   0.02   0.14   0.04   0.05   0.13   0.03   0.12   0.08   0.47   0.93  -0.84   0.6   -0.13   0.92 
+ -0.06   0.97   1     -0.69   0.58  -0.36   0.39   0.06   0.03   0.17   0.04   0.06   0.17   0.02   0.13   0.08   0.42   0.94  -0.86   0.53  -0.13   0.88 
+ -0.05  -0.72  -0.69   1     -0.24  -0.07  -0.22  -0.01   0.13  -0.16   0.05   0.01  -0.01   0.1   -0.06  -0.07  -0.56  -0.73   0.81  -0.85   0.18  -0.82 
+ -0.13   0.53   0.58  -0.24   1     -0.3    0.37   0.29   0.15   0.29   0.02   0.11   0.18   0.08   0.16   0.07  -0.1    0.53  -0.46  -0.11   0.02   0.35 
+  0.03  -0.31  -0.36  -0.07  -0.3    1     -0     -0.21  -0.04  -0.11  -0.11  -0.23  -0.28  -0.13  -0.12  -0.04  -0.03  -0.34   0.19   0.24  -0     -0.18 
+ -0.16   0.36   0.39  -0.22   0.37  -0      1      0.12   0.03   0.24   0.07   0.11   0.07   0.09   0.07   0.11  -0.08   0.37  -0.26   0.08   0.01   0.25 
+  0.03   0.03   0.06  -0.01   0.29  -0.21   0.12   1      0.15   0.18   0.07   0.07   0.2    0.04   0      0.09  -0.28   0.03  -0.05  -0.29   0.16  -0.09 
+ -0.04   0.02   0.03   0.13   0.15  -0.04   0.03   0.15   1      0.14   0.07   0.07  -0      0.24  -0.07   0.02  -0.25  -0.02   0.03  -0.2    0.14  -0.07 
+  0.04   0.14   0.17  -0.16   0.29  -0.11   0.24   0.18   0.14   1      0.17   0.08   0.14   0.07   0.04  -0.04  -0.14   0.14  -0.14  -0.03   0.09   0.06 
+  0      0.04   0.04   0.05   0.02  -0.11   0.07   0.07   0.07   0.17   1      0.27   0.05   0.15  -0.05  -0.02  -0.15   0.03   0.02  -0.07   0.1   -0.02 
+ -0.03   0.05   0.06   0.01   0.11  -0.23   0.11   0.07   0.07   0.08   0.27   1      0.27   0.21   0.09   0.01  -0.12   0.06  -0.04  -0.11   0.07  -0.01 
+  0.02   0.13   0.17  -0.01   0.18  -0.28   0.07   0.2   -0      0.14   0.05   0.27   1      0.27   0.1    0.12  -0.06   0.15  -0.13  -0.13   0.01   0.05 
+ -0.04   0.03   0.02   0.1    0.08  -0.13   0.09   0.04   0.24   0.07   0.15   0.21   0.27   1      0.29   0.13  -0.19  -0.01   0.02  -0.13   0.13  -0.05 
+ -0.05   0.12   0.13  -0.06   0.16  -0.12   0.07   0     -0.07   0.04  -0.05   0.09   0.1    0.29   1      0.34  -0.02   0.14  -0.11   0.01  -0.05   0.08 
+ -0.02   0.08   0.08  -0.07   0.07  -0.04   0.11   0.09   0.02  -0.04  -0.02   0.01   0.12   0.13   0.34   1     -0.02   0.08  -0.1    0.03  -0.03   0.05 
+  0.06   0.47   0.42  -0.56  -0.1   -0.03  -0.08  -0.28  -0.25  -0.14  -0.15  -0.12  -0.06  -0.19  -0.02  -0.02   1      0.48  -0.43   0.73  -0.26   0.65 
+ -0.11   0.93   0.94  -0.73   0.53  -0.34   0.37   0.03  -0.02   0.14   0.03   0.06   0.15  -0.01   0.14   0.08   0.48   1     -0.83   0.59  -0.19   0.9  
+ -0.02  -0.84  -0.86   0.81  -0.46   0.19  -0.26  -0.05   0.03  -0.14   0.02  -0.04  -0.13   0.02  -0.11  -0.1   -0.43  -0.83   1     -0.62   0.18  -0.8  
+  0.05   0.6    0.53  -0.85  -0.11   0.24   0.08  -0.29  -0.2   -0.03  -0.07  -0.11  -0.13  -0.13   0.01   0.03   0.73   0.59  -0.62   1     -0.19   0.81 
+  0.11  -0.13  -0.13   0.18   0.02  -0      0.01   0.16   0.14   0.09   0.1    0.07   0.01   0.13  -0.05  -0.03  -0.26  -0.19   0.18  -0.19   1     -0.16 
+ -0.04   0.92   0.88  -0.82   0.35  -0.18   0.25  -0.09  -0.07   0.06  -0.02  -0.01   0.05  -0.05   0.08   0.05   0.65   0.9   -0.8    0.81  -0.16   1    
+
+
+eigenvalue	proportion	cumulative
+  6.58061	  0.29912	  0.29912	0.373Spectral_Centroid+0.371Roll_Off_85+0.371Spectral_Flatness+0.368Roll_Off_90-0.352Spectral_Kurtosis...
+  2.93221	  0.13328	  0.4324 	-0.341MFCC_2+0.325Spectral_Brightness+0.324Zero_Crossing_Rate-0.307MFCC_5+0.294MFCC_3...
+  1.48212	  0.06737	  0.49977	-0.558MFCC_12-0.466MFCC_13-0.34MFCC_11+0.288MFCC_7-0.234MFCC_10...
+  1.3093 	  0.05951	  0.55928	0.441MFCC_9+0.421MFCC_8+0.369RMS_Energy-0.31MFCC_4+0.265MFCC_10...
+  1.22853	  0.05584	  0.61513	-0.527MFCC_3-0.321MFCC_11-0.307Spectral_Irregularity-0.263Spectral_Brightness-0.249MFCC_4...
+  1.15237	  0.05238	  0.66751	-0.641RMS_Energy-0.389MFCC_5+0.329MFCC_8+0.281MFCC_9-0.261Spectral_Irregularity...
+  1.02276	  0.04649	  0.714  	-0.68MFCC_6-0.342MFCC_11+0.325MFCC_4+0.297MFCC_7+0.197MFCC_8...
+  0.86253	  0.03921	  0.7532 	-0.456MFCC_10-0.421MFCC_7+0.412MFCC_8+0.391Spectral_Irregularity+0.329MFCC_13...
+  0.8351 	  0.03796	  0.79116	-0.628Spectral_Irregularity+0.382MFCC_8+0.315MFCC_6+0.289MFCC_7-0.27MFCC_4...
+  0.8214 	  0.03734	  0.8285 	0.447MFCC_12-0.408MFCC_5+0.353MFCC_7-0.35MFCC_10-0.316MFCC_13...
+  0.70309	  0.03196	  0.86046	-0.555RMS_Energy-0.378MFCC_9-0.346MFCC_4+0.345MFCC_7+0.251Spectral_Irregularity...
+  0.67064	  0.03048	  0.89094	-0.545MFCC_9-0.357MFCC_12+0.34 MFCC_4-0.3MFCC_5+0.264MFCC_10...
+  0.64242	  0.0292 	  0.92014	-0.429MFCC_13+0.421MFCC_5+0.413MFCC_11-0.36MFCC_7-0.265MFCC_9...
+  0.53746	  0.02443	  0.94457	-0.435MFCC_2+0.434MFCC_4-0.402MFCC_3+0.322MFCC_5-0.319MFCC_10...
+  0.42707	  0.01941	  0.96398	0.48 MFCC_12-0.442MFCC_11+0.356MFCC_6+0.335MFCC_10-0.268MFCC_13...
+
+Eigenvectors
+ V1	 V2	 V3	 V4	 V5	 V6	 V7	 V8	 V9	 V10	 V11	 V12	 V13	 V14	 V15	
+-0.0181	 0.0718	 0.0634	 0.3688	-0.1521	-0.6406	 0.0445	-0.0593	 0.1545	 0.1752	-0.555 	 0.1815	 0.1001	 0.0274	 0.0309	RMS_Energy
+ 0.3713	-0.0724	 0.0382	 0.0017	 0.0334	 0.0209	-0.103 	 0.0668	-0.0158	 0.0381	-0.0432	 0.0814	 0.0144	-0.0426	 0.0045	Roll_Off_85
+ 0.3681	-0.1115	 0.0475	-0.0174	 0.0768	 0.0158	-0.0784	 0.0552	-0.0165	 0.0524	-0.0601	 0.0926	 0.0088	-0.0577	 0.0268	Roll_Off_90
+-0.3324	-0.1336	-0.053 	-0.0321	 0.1998	 0.1024	-0.1055	 0.0681	-0.0229	 0.1364	-0.0871	 0.2236	-0.0713	 0.0186	 0.112 	MFCC_1
+ 0.1866	-0.3412	 0.1479	-0.2613	 0.1414	-0.03  	 0.0005	 0.0033	-0.0427	 0.1599	-0.1904	-0.0679	 0.0638	-0.435 	-0.2357	MFCC_2
+-0.0914	 0.2936	 0.0975	-0.2159	-0.5271	 0.0481	 0.1349	-0.1884	-0.1072	-0.2476	-0.0799	-0.1368	 0.1836	-0.4021	 0.0462	MFCC_3
+ 0.1381	-0.2032	 0.1277	-0.3098	-0.2492	 0.2209	 0.3247	-0.037 	-0.27  	-0.0593	-0.3456	 0.3405	 0.0041	 0.434 	 0.2594	MFCC_4
+-0.0036	-0.3073	 0.195 	-0.1062	 0.0996	-0.3893	 0.1337	 0.1725	 0.0832	-0.4077	 0.2347	-0.3002	 0.4209	 0.322 	 0.0683	MFCC_5
+-0.0283	-0.2214	 0.1908	-0.0673	-0.2282	 0.0464	-0.6802	-0.1315	 0.3145	-0.2379	-0.129 	-0.0983	-0.2246	 0.0182	 0.3557	MFCC_6
+ 0.0607	-0.2371	 0.288 	 0.0115	-0.244 	-0.0804	 0.2968	-0.4208	 0.2885	 0.353 	 0.3452	-0.082 	-0.3596	 0.1372	-0.1277	MFCC_7
+-0.0026	-0.179 	 0.1128	 0.4211	-0.2461	 0.3293	 0.1966	 0.4123	 0.3824	 0.0216	 0.1648	 0.2589	 0.2469	-0.2218	 0.172 	MFCC_8
+ 0.0141	-0.2485	-0.1374	 0.4409	-0.0344	 0.2811	 0.1852	 0.0393	-0.1258	-0.2017	-0.378 	-0.5452	-0.265 	 0.0838	-0.1325	MFCC_9
+ 0.0486	-0.2704	-0.234 	 0.2653	 0.173 	-0.1546	 0.1545	-0.4559	-0.2321	-0.35  	 0.2033	 0.2639	-0.0782	-0.3192	 0.335 	MFCC_10
+-0.0117	-0.268 	-0.34  	 0.1484	-0.3207	 0.109 	-0.3425	-0.2692	-0.128 	 0.0652	 0.0974	 0.1626	 0.4126	 0.231 	-0.4415	MFCC_11
+ 0.0544	-0.1418	-0.5583	-0.1902	-0.1509	-0.0901	 0.0646	 0.0527	 0.0629	 0.4467	 0.0183	-0.3572	 0.1515	-0.0506	 0.4801	MFCC_12
+ 0.0398	-0.1006	-0.4662	-0.2571	-0.2217	-0.2344	 0.1034	 0.3292	 0.2538	-0.3156	 0.0286	 0.2323	-0.4286	-0.0225	-0.2683	MFCC_13
+ 0.2307	 0.3245	-0.1088	 0.1826	 0.1   	-0.0245	-0.0676	-0.0196	-0.0013	 0.001 	 0.1414	 0.0151	-0.1172	 0.28  	 0.1485	Zero_Crossing_Rate
+ 0.3711	-0.0698	 0.012 	-0.0187	 0.09  	 0.0545	-0.043 	 0.0498	-0.011 	 0.0277	-0.0118	 0.0384	 0.0004	-0.0014	 0.0588	Spectral_Flatness
+-0.3517	 0.0247	-0.0254	-0.0013	 0.0112	 0.088 	 0.0192	 0.0203	-0.0388	 0.0594	 0.0457	 0.0791	-0.0755	 0.1654	 0.1597	Spectral_Kurtosis
+ 0.2849	 0.3245	-0.0382	 0.1085	-0.2629	 0.0076	 0.0094	-0.0259	-0.032 	-0.0937	 0.1282	-0.075 	-0.0043	 0.0695	 0.0358	Spectral_Brightness
+-0.0826	-0.1561	 0.1983	 0.1447	-0.3073	-0.2615	-0.1792	 0.3908	-0.6277	 0.169 	 0.2508	-0.0217	-0.2365	-0.0766	 0.0485	Spectral_Irregularity
+ 0.373 	 0.0791	 0.0046	 0.0544	-0.018 	 0.0153	-0.099 	 0.0605	-0.05  	 0.003 	 0.049 	 0.0131	-0.0142	 0.0257	 0.0428	Spectral_Centroid
+
+Ranked attributes:
+ 0.7009   1 0.373Spectral_Centroid+0.371Roll_Off_85+0.371Spectral_Flatness+0.368Roll_Off_90-0.352Spectral_Kurtosis...
+ 0.5676   2 -0.341MFCC_2+0.325Spectral_Brightness+0.324Zero_Crossing_Rate-0.307MFCC_5+0.294MFCC_3...
+ 0.5002   3 -0.558MFCC_12-0.466MFCC_13-0.34MFCC_11+0.288MFCC_7-0.234MFCC_10...
+ 0.4407   4 0.441MFCC_9+0.421MFCC_8+0.369RMS_Energy-0.31MFCC_4+0.265MFCC_10...
+ 0.3849   5 -0.527MFCC_3-0.321MFCC_11-0.307Spectral_Irregularity-0.263Spectral_Brightness-0.249MFCC_4...
+ 0.3325   6 -0.641RMS_Energy-0.389MFCC_5+0.329MFCC_8+0.281MFCC_9-0.261Spectral_Irregularity...
+ 0.286    7 -0.68MFCC_6-0.342MFCC_11+0.325MFCC_4+0.297MFCC_7+0.197MFCC_8...
+ 0.2468   8 -0.456MFCC_10-0.421MFCC_7+0.412MFCC_8+0.391Spectral_Irregularity+0.329MFCC_13...
+ 0.2088   9 -0.628Spectral_Irregularity+0.382MFCC_8+0.315MFCC_6+0.289MFCC_7-0.27MFCC_4...
+ 0.1715  10 0.447MFCC_12-0.408MFCC_5+0.353MFCC_7-0.35MFCC_10-0.316MFCC_13...
+ 0.1395  11 -0.555RMS_Energy-0.378MFCC_9-0.346MFCC_4+0.345MFCC_7+0.251Spectral_Irregularity...
+ 0.1091  12 -0.545MFCC_9-0.357MFCC_12+0.34 MFCC_4-0.3MFCC_5+0.264MFCC_10...
+ 0.0799  13 -0.429MFCC_13+0.421MFCC_5+0.413MFCC_11-0.36MFCC_7-0.265MFCC_9...
+ 0.0554  14 -0.435MFCC_2+0.434MFCC_4-0.402MFCC_3+0.322MFCC_5-0.319MFCC_10...
+ 0.036   15 0.48 MFCC_12-0.442MFCC_11+0.356MFCC_6+0.335MFCC_10-0.268MFCC_13...
+
+Selected attributes: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 : 15
+
+
+Header of reduced data:
+@relation 'afterProcGTZAN-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last-weka.filters.unsupervised.attribute.Remove-R23-weka.filters.unsupervised.attribute.Standardize_principal components-weka.filters.unsupervised.attribute.Remove-V-R1-16'
+
+@attribute 0.373Spectral_Centroid+0.371Roll_Off_85+0.371Spectral_Flatness+0.368Roll_Off_90-0.352Spectral_Kurtosis... numeric
+@attribute -0.341MFCC_2+0.325Spectral_Brightness+0.324Zero_Crossing_Rate-0.307MFCC_5+0.294MFCC_3... numeric
+@attribute -0.558MFCC_12-0.466MFCC_13-0.34MFCC_11+0.288MFCC_7-0.234MFCC_10... numeric
+@attribute 0.441MFCC_9+0.421MFCC_8+0.369RMS_Energy-0.31MFCC_4+0.265MFCC_10... numeric
+@attribute -0.527MFCC_3-0.321MFCC_11-0.307Spectral_Irregularity-0.263Spectral_Brightness-0.249MFCC_4... numeric
+@attribute -0.641RMS_Energy-0.389MFCC_5+0.329MFCC_8+0.281MFCC_9-0.261Spectral_Irregularity... numeric
+@attribute -0.68MFCC_6-0.342MFCC_11+0.325MFCC_4+0.297MFCC_7+0.197MFCC_8... numeric
+@attribute -0.456MFCC_10-0.421MFCC_7+0.412MFCC_8+0.391Spectral_Irregularity+0.329MFCC_13... numeric
+@attribute -0.628Spectral_Irregularity+0.382MFCC_8+0.315MFCC_6+0.289MFCC_7-0.27MFCC_4... numeric
+@attribute 0.447MFCC_12-0.408MFCC_5+0.353MFCC_7-0.35MFCC_10-0.316MFCC_13... numeric
+@attribute -0.555RMS_Energy-0.378MFCC_9-0.346MFCC_4+0.345MFCC_7+0.251Spectral_Irregularity... numeric
+@attribute '-0.545MFCC_9-0.357MFCC_12+0.34 MFCC_4-0.3MFCC_5+0.264MFCC_10...' numeric
+@attribute -0.429MFCC_13+0.421MFCC_5+0.413MFCC_11-0.36MFCC_7-0.265MFCC_9... numeric
+@attribute -0.435MFCC_2+0.434MFCC_4-0.402MFCC_3+0.322MFCC_5-0.319MFCC_10... numeric
+@attribute '0.48 MFCC_12-0.442MFCC_11+0.356MFCC_6+0.335MFCC_10-0.268MFCC_13...' numeric
+@attribute Class {0,1}
+
+@data
+
+
+Classifier Model
+IB1 instance-based classifier
+using 4 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.11 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 51.66 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       29084               65.5636 %
+Incorrectly Classified Instances     15276               34.4364 %
+Kappa statistic                          0.1402
+Mean absolute error                      0.3331
+Root mean squared error                  0.5052
+Relative absolute error                 66.837  %
+Root relative squared error            101.3697 %
+Total Number of Instances            44360     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,425    0,271    0,331      0,425    0,373      0,142    0,606     0,312     0
+                 0,729    0,575    0,800      0,729    0,763      0,142    0,606     0,806     1
+Weighted Avg.    0,656    0,502    0,688      0,656    0,669      0,142    0,606     0,687     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+  4535  6129 |     a = 0
+  9147 24549 |     b = 1
+
