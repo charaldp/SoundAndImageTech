@@ -13,8 +13,8 @@ timestampList = dir('MusicSpeech\muspeak-mirex2015-detection-examples\*.csv');
 % replace. The speech 's' label has been replaced with 0 and the music 'm'
 % label with 1.
 
-% timestampData = csvread('C:\Users\Παναγιώτης\THMMY\5ο Έτος\9ο Εξάμηνο\Τεχνολογία Ήχου και Εικόνας\Data Sound Files\muspeak-mirex2015-detection-examples\ConscinciasParalelasN7-OsSentidosOSentirEAsNormasParte715-1-1994.csv');
-% audio=miraudio('C:\Users\Παναγιώτης\THMMY\5ο Έτος\9ο Εξάμηνο\Τεχνολογία Ήχου και Εικόνας\Data Sound Files\muspeak-mirex2015-detection-examples\ConscinciasParalelasN7-OsSentidosOSentirEAsNormasParte715-1-1994.mp3');
+% timestampData = csvread('C:\Users\ΓΓ΅Γ­Γ΅Γ£Γ©ΓΎΓ΄Γ§Γ²\THMMY\5Γ― ΒΈΓ΄Γ―Γ²\9Γ― Γ…Γ®ΓΓ¬Γ§Γ­Γ―\Γ”Γ¥Γ·Γ­Γ―Γ«Γ―Γ£ΓΓ΅ ΒΉΓ·Γ―Γµ ΓªΓ΅Γ© Γ…Γ©ΓªΓΌΓ­Γ΅Γ²\Data Sound Files\muspeak-mirex2015-detection-examples\ConscinciasParalelasN7-OsSentidosOSentirEAsNormasParte715-1-1994.csv');
+% audio=miraudio('C:\Users\ΓΓ΅Γ­Γ΅Γ£Γ©ΓΎΓ΄Γ§Γ²\THMMY\5Γ― ΒΈΓ΄Γ―Γ²\9Γ― Γ…Γ®ΓΓ¬Γ§Γ­Γ―\Γ”Γ¥Γ·Γ­Γ―Γ«Γ―Γ£ΓΓ΅ ΒΉΓ·Γ―Γµ ΓªΓ΅Γ© Γ…Γ©ΓªΓΌΓ­Γ΅Γ²\Data Sound Files\muspeak-mirex2015-detection-examples\ConscinciasParalelasN7-OsSentidosOSentirEAsNormasParte715-1-1994.mp3');
 
 %timestampData = csvread('C:\Users\Hampo\Desktop\MusicSpeech\muspeak-mirex2015-detection-examples\ConscinciasParalelasN7-OsSentidosOSentirEAsNormasParte715-1-1994.csv');
 %audio=miraudio('C:\Users\Hampo\Desktop\MusicSpeech\muspeak-mirex2015-detection-examples\ConscinciasParalelasN7-OsSentidosOSentirEAsNormasParte715-1-1994.mp3');
@@ -113,8 +113,6 @@ for j = 1:length(mp3List)
 
     %% Write Data to CSV File
     
-    fname=sprintf('Output/rawDataMirex%s.csv',mp3List(j).name);
-    writetable(cell2table([attributes;num2cell(data)]),fname,'writevariablenames',0);
-    fname=sprintf('Output/noATTRS%s',fname);
-    csvwrite(fname,data);
+    writetable(cell2table([attributes;num2cell(data)]),sprintf('Output/rawDataMirex%s.csv',mp3List(j).name),'writevariablenames',0);
+    writetable(cell2table(num2cell(data)),sprintf('Output/noATTRSrawDataMirex%s.csv',mp3List(j).name),'writevariablenames',0);
 end
