@@ -15,7 +15,7 @@ extractFeaturesCsvMixedMirexExamples
 
 %% 2. Normalize datasets 
 
-proprocessInstances
+preprocessInstances
 
 %% 3. Classify With Fuzzy Model
 
